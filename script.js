@@ -11,6 +11,7 @@ function fun_for_scale() {
   final_answer = full_answer.slice(0, full_answer.indexOf(".") + num + 1)
   if (!isFinite(final_answer)) {
     document.getElementById("answer").innerText = "please fill the input"
+    return
   }
   if (full_answer.indexOf(".") === -1) {
     document.getElementById("answer").innerText = "answer=" + full_answer
