@@ -9,14 +9,15 @@ function fun_for_scale() {
     header_text + document.getElementById("my_range").value
 
   final_answer = full_answer.slice(0, full_answer.indexOf(".") + num + 1)
-  if (!isFinite(final_answer)) {
-    document.getElementById("answer").innerText = "please fill the input"
-    return
-  }
   if (full_answer.indexOf(".") === -1) {
     document.getElementById("answer").innerText = "answer=" + full_answer
     return
   }
+  if (!isFinite(final_answer)) {
+    document.getElementById("answer").innerText = "please fill the input"
+    return
+  }
+
     document.getElementById("answer").innerText = "answer=" +  full_answer.slice(0, full_answer.indexOf(".") + num + 1)
 
   console.log(final_answer)
