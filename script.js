@@ -16,6 +16,8 @@ function fun_for_scale() {
     document.getElementById("answer").innerText = "answer=" + full_answer
     return
   }
+    document.getElementById("answer").innerText = "answer=" +  full_answer.slice(0, full_answer.indexOf(".") + num + 1)
+
   console.log(final_answer)
   console.log(isFinite(final_answer))
 }
@@ -35,7 +37,7 @@ function on_click_plus() {
     document.getElementById("answer").innerText = "answer=" + answer
     return
   }
-  document.getElementById("answer").innerText = "answer=" + answer
+  document.getElementById("answer").innerText = "answer=" +  answer.slice(0, answer.indexOf(".") + num + 1)
 }
 
 function on_click_minus() {
@@ -53,7 +55,7 @@ function on_click_minus() {
     document.getElementById("answer").innerText = "answer=" + answer
     return
   }
-  document.getElementById("answer").innerText = "answer=" + answer
+  document.getElementById("answer").innerText = "answer=" +  answer.slice(0, answer.indexOf(".") + num + 1)
 }
 function on_click_mul() {
   num = Number(document.getElementById("my_range").value)
@@ -70,7 +72,7 @@ function on_click_mul() {
     document.getElementById("answer").innerText = "answer=" + answer
     return
   }
-  document.getElementById("answer").innerText = "answer=" + answer
+  document.getElementById("answer").innerText = "answer=" +  answer.slice(0, answer.indexOf(".") + num + 1)
 }
 function on_click_div() {
   num = Number(document.getElementById("my_range").value)
@@ -87,5 +89,5 @@ function on_click_div() {
     document.getElementById("answer").innerText = "answer=" + answer
     return
   }
-  document.getElementById("answer").innerText = "answer=" + answer
+  document.getElementById("answer").innerText = "answer=" +  answer.slice(0, answer.indexOf(".") + num + 1)
 }
