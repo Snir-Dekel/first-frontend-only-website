@@ -11,10 +11,21 @@ input {
   height: 200px;
   width: 810px;
 }
-button{
+button {
   width: 150px;
 }
-input[type=range] {
+input[type="range"] {
   position: absolute;
   top: 740px;
+}
+#sign {
+  stroke-dasharray: 3478.037353515625;
+  stroke-dashoffset: 3478.037353515625;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

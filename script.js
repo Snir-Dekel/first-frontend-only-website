@@ -7,29 +7,44 @@ function fun_for_scale() {
   num = Number(document.getElementById("my_range").value)
   document.getElementById("precision header").textContent =
     header_text + document.getElementById("my_range").value
-
-  final_answer = full_answer.slice(0, full_answer.indexOf(".") + num + 1)
+  let final_answer = full_answer.slice(0, full_answer.indexOf(".") + num + 1)
+  console.log(final_answer)
+  if (!isFinite(final_answer) && final_answer!=="-") {
+    document.getElementById("answer").innerText = "please fill the input"
+    return
+  }
   if (full_answer.indexOf(".") === -1) {
     document.getElementById("answer").innerText = "answer=" + full_answer
     return
   }
-  if (!isFinite(final_answer)) {
-    document.getElementById("answer").innerText = "please fill the input"
-    return
-  }
 
-    document.getElementById("answer").innerText = "answer=" +  full_answer.slice(0, full_answer.indexOf(".") + num + 1)
-
-  console.log(final_answer)
-  console.log(isFinite(final_answer))
+  document.getElementById("answer").innerText =
+    "answer=" + full_answer.slice(0, full_answer.indexOf(".") + num + 1)
 }
 
-function on_click_plus() {
+function main_function(operand) {
   num = Number(document.getElementById("my_range").value)
-  answer = String(
-    parseFloat(document.getElementById("num1").value) +
-      parseFloat(document.getElementById("num2").value)
-  )
+  if (operand === "/") {
+    answer = String(
+      parseFloat(document.getElementById("num1").value) /
+        parseFloat(document.getElementById("num2").value)
+    )
+  } else if (operand === "+") {
+    answer = String(
+      parseFloat(document.getElementById("num1").value) +
+        parseFloat(document.getElementById("num2").value)
+    )
+  } else if (operand === "*") {
+    answer = String(
+      parseFloat(document.getElementById("num1").value) *
+        parseFloat(document.getElementById("num2").value)
+    )
+  } else if (operand === "-") {
+    answer = String(
+      parseFloat(document.getElementById("num1").value) -
+        parseFloat(document.getElementById("num2").value)
+    )
+  }
   full_answer = answer
   if (!isFinite(answer)) {
     document.getElementById("answer").innerText = "please fill the input"
@@ -39,57 +54,6 @@ function on_click_plus() {
     document.getElementById("answer").innerText = "answer=" + answer
     return
   }
-  document.getElementById("answer").innerText = "answer=" +  answer.slice(0, answer.indexOf(".") + num + 1)
-}
-
-function on_click_minus() {
-  num = Number(document.getElementById("my_range").value)
-  answer = String(
-    parseFloat(document.getElementById("num1").value) -
-      parseFloat(document.getElementById("num2").value)
-  )
-  full_answer = answer
-  if (!isFinite(answer)) {
-    document.getElementById("answer").innerText = "please fill the input"
-    return
-  }
-  if (answer.indexOf(".") === -1) {
-    document.getElementById("answer").innerText = "answer=" + answer
-    return
-  }
-  document.getElementById("answer").innerText = "answer=" +  answer.slice(0, answer.indexOf(".") + num + 1)
-}
-function on_click_mul() {
-  num = Number(document.getElementById("my_range").value)
-  answer = String(
-    parseFloat(document.getElementById("num1").value) *
-      parseFloat(document.getElementById("num2").value)
-  )
-  full_answer = answer
-  if (!isFinite(answer)) {
-    document.getElementById("answer").innerText = "please fill the input"
-    return
-  }
-  if (answer.indexOf(".") === -1) {
-    document.getElementById("answer").innerText = "answer=" + answer
-    return
-  }
-  document.getElementById("answer").innerText = "answer=" +  answer.slice(0, answer.indexOf(".") + num + 1)
-}
-function on_click_div() {
-  num = Number(document.getElementById("my_range").value)
-  answer = String(
-    parseFloat(document.getElementById("num1").value) /
-      parseFloat(document.getElementById("num2").value)
-  )
-  full_answer = answer
-  if (!isFinite(answer)) {
-    document.getElementById("answer").innerText = "please fill the input"
-    return
-  }
-  if (answer.indexOf(".") === -1) {
-    document.getElementById("answer").innerText = "answer=" + answer
-    return
-  }
-  document.getElementById("answer").innerText = "answer=" +  answer.slice(0, answer.indexOf(".") + num + 1)
+  document.getElementById("answer").innerText =
+    "answer=" + answer.slice(0, answer.indexOf(".") + num + 1)
 }
