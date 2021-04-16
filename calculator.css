@@ -2,7 +2,7 @@ button:hover {
   background: blue;
   border-color: red;
 }
-* {
+:not(._hj-OO1S1__styles__openStateToggle) {
   background: #2a324b;
   color: white;
   font-size: 80px;
@@ -28,7 +28,4 @@ input[type="range"] {
   to {
     stroke-dashoffset: 0;
   }
-}
-._hj-OO1S1__styles__openStateToggle{
-  font-size: 8px;
 }
