@@ -1,3 +1,14 @@
+button ,h1 {
+  animation: mykeyframe 1s;
+}
+@keyframes mykeyframe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
 button:hover {
   background: blue;
   border-color: red;
