@@ -12,20 +12,34 @@
     <link rel="icon" type="image/png" href="Screenshot_21.png" />
     <!-- Hotjar Tracking Code for https://snir-dekel.github.io/website/ -->
     <script>
-      ;(function (h, o, t, j, a, r) {
+      (function (h, o, t, j, a, r) {
         h.hj =
           h.hj ||
           function () {
-            ;(h.hj.q = h.hj.q || []).push(arguments)
-          }
-        h._hjSettings = { hjid: 2349994, hjsv: 6 }
-        a = o.getElementsByTagName("head")[0]
-        r = o.createElement("script")
-        r.async = 1
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv
-        a.appendChild(r)
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=")
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2349994, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
+    <style>
+      button,
+      h1 {
+        animation: mykeyframe 1s;
+      }
+      @keyframes mykeyframe {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
 
   <body>
