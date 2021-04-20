@@ -1,4 +1,5 @@
-button ,h1 {
+button,
+h1 {
   animation: mykeyframe 1s;
 }
 @keyframes mykeyframe {
@@ -35,8 +36,36 @@ input[type="range"] {
   animation: sign 4s ease;
   animation-fill-mode: forwards;
 }
-#sign:hover{
-  animation-play-state: paused;
+#sign:hover {
+  /*animation-play-state: paused;*/
+  animation-name: rgb_animation, sign;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes rgb_animation {
+  0% {
+    stroke: #ff0000;
+  }
+  25% {
+    stroke: #080cff;
+  }
+  50% {
+    stroke: #00ff2a;
+  }
+  75% {
+    stroke: #ffe600;
+  }
+  100% {
+    stroke: #ff0000;
+  }
+}
+#sign_elem {
+  position: absolute;
+  top: 50px;
+  left: 900px;
 }
 @keyframes sign {
   to {
