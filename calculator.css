@@ -33,7 +33,7 @@ input[type="range"] {
 #sign {
   stroke-dasharray: 3478.037353515625;
   stroke-dashoffset: 3478.037353515625;
-  animation: sign 4s ease;
+  animation: sign 4s cubic-bezier(0.41, 1.15, 0.71,-0.32);
   animation-fill-mode: forwards;
 }
 #sign:hover {
@@ -42,7 +42,7 @@ input[type="range"] {
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
-
+  transition-timing-function: cubic-bezier(0.41, 1.15, 0.71,-0.32);
 }
 
 @keyframes rgb_animation {
