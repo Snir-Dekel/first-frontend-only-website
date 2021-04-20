@@ -33,16 +33,17 @@ input[type="range"] {
 #sign {
   stroke-dasharray: 3478.037353515625;
   stroke-dashoffset: 3478.037353515625;
-  animation: sign 5s cubic-bezier(0.41, 1.15, 0.71,-0.32);
+  animation: sign 5s cubic-bezier(0.41, 1.15, 0.71, -0.32);
   animation-fill-mode: forwards;
 }
-#sign:hover {
+
+#sign_elem:hover #sign {
   /*animation-play-state: paused;*/
   animation-name: rgb_animation, sign;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
-  transition-timing-function: cubic-bezier(0.41, 1.15, 0.71,-0.32);
+  transition-timing-function: cubic-bezier(0.41, 1.15, 0.71, -0.32);
 }
 
 @keyframes rgb_animation {
