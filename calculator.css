@@ -10,8 +10,8 @@ button ,h1 {
   }
 }
 button:hover {
-  background: blue;
-  border-color: red;
+  background: #1919c4;
+  border-color: #ff4f00;
 }
 :not(._hj-OO1S1__styles__openStateToggle) {
   background: #2a324b;
@@ -34,6 +34,9 @@ input[type="range"] {
   stroke-dashoffset: 3478.037353515625;
   animation: sign 4s ease;
   animation-fill-mode: forwards;
+}
+#sign:hover{
+  animation-play-state: paused;
 }
 @keyframes sign {
   to {
