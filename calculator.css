@@ -77,7 +77,7 @@ input[type="range"] {
   }
 }
 #sign_elem {
-  animation: cursor_animation 1s linear infinite;
+  animation: cursor_animation 750ms linear infinite;
   position: absolute;
   top: 50px;
   left: 900px;
