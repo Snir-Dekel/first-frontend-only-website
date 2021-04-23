@@ -107,6 +107,7 @@ input[type="range"] {
 }
 #sign_elem {
   border: white 5px solid;
+  padding: 5px;
   position: absolute;
   top: 50px;
   left: 900px;
