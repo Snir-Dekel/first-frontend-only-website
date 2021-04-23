@@ -49,19 +49,14 @@ input[type="range"] {
 }
 
 #sign_elem:hover #sign {
-  animation: rgb_animation 5s linear forwards infinite,
+  animation: rgb_stroke_animation 5s linear forwards infinite,
     sign 5s cubic-bezier(0.41, 1.15, 0.71, -0.32) forwards infinite;
-  /*animation-name: rgb_animation, sign;*/
-  /*animation-duration: 5s;*/
-  /*animation-iteration-count: infinite;*/
-  /*animation-fill-mode: forwards;*/
-  /*transition-timing-function: cubic-bezier(0.41, 1.15, 0.71, -0.32);*/
 }
 #sign_elem:hover {
-  animation: border_rgb 5s linear infinite,
+  animation: border_rgb_animation 5s linear infinite,
     cursor_animation 750ms linear infinite;
 }
-@keyframes border_rgb {
+@keyframes border_rgb_animation {
   from {
     border: 5px rgb(255, 0, 0) solid;
   }
@@ -89,7 +84,7 @@ input[type="range"] {
     auto;
   animation-play-state: paused !important;
 }
-@keyframes rgb_animation {
+@keyframes rgb_stroke_animation {
   from {
     stroke: rgb(255, 0, 0);
   }
