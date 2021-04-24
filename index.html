@@ -107,25 +107,24 @@
       </defs>
     </svg>
     <script>
-      const isHover = (e) => e.parentElement.querySelector(":hover") === e;
-      const path = document.getElementById("path");
-      const sign_element = document.getElementById("sign_element");
-      document.addEventListener("mousemove", function checkHover() {
-        const hovered = isHover(path);
-        const hovered1 = isHover(sign_element);
-        if (hovered !== checkHover.hovered || hovered1 !== checkHover.hovered) {
-          if (hovered) {
-            console.log("yes");
-            document.getElementById("sign_element").style.animationPlayState =
-              "paused";
-          } else {
-            console.log("no");
-            document.getElementById("sign_element").style.animationPlayState =
-              "running";
-          }
-          checkHover.hovered = hovered;
-        }
-      });
+      let my_path = document.getElementById("path");
+
+      my_path.addEventListener(
+        "mouseover",
+        function (event) {
+          document.getElementById("sign_element").style.animationPlayState =
+            "paused";
+        },
+        false
+      );
+      my_path.addEventListener(
+        "mouseout",
+        function (event) {
+          document.getElementById("sign_element").style.animationPlayState =
+            "running";
+        },
+        false
+      );
     </script>
     <script src="calculator.js"></script>
   </body>
