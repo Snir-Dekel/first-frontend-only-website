@@ -4,6 +4,9 @@
   transition-duration: 100ms;
 }
 #sign_element {
+  animation: animation_opacity_change 2s, animation_stand_up_3d 2s linear 1;
+   transform-origin: bottom;
+   transform-style: preserve-3d;
   border: white 10px solid;
   border-radius: 10px;
   padding: 5px;
@@ -13,10 +16,15 @@
 }
 button,
 h1 {
-  animation: mykeyframe 1s;
+  animation: animation_opacity_change 1s, animation_stand_up_3d 1s linear 1;
+          transform-origin: bottom;
+        transform-style: preserve-3d;
 }
-@keyframes mykeyframe {
-  from {
+@keyframes animation_opacity_change {
+  0% {
+    opacity: 0;
+  }
+  20%{
     opacity: 0;
   }
   to {
@@ -256,5 +264,22 @@ input[type="range"] {
   }
   75% {
     transform: rotate3d(1, -1, 0, 40deg);
+  }
+}
+@keyframes animation_stand_up_3d {
+  0% {
+    transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  25% {
+    transform: rotate3d(-1, 0, 0, 67.5deg);
+  }
+  50% {
+    transform: rotate3d(-1, 0, 0, 45deg);
+  }
+  50% {
+    transform: rotate3d(-1, 0, 0, 22.5deg);
+  }
+  100% {
+    transform: rotate3d(-1, 0, 0, 0deg);
   }
 }
