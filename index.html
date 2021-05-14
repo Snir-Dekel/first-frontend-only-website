@@ -108,7 +108,14 @@
     </svg>
     <script>
       let my_path = document.getElementById("path");
-
+      let sign_element = document.getElementById("sign_element")
+        sign_element.addEventListener(
+        "mouseover",
+        function (event) {
+        sign_element.setAttribute("data-sign-element-was-hovered", "true")
+        },
+        false
+      );
       my_path.addEventListener(
         "mouseover",
         function (event) {
