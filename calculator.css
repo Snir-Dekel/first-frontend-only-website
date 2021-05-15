@@ -26,6 +26,7 @@
 }
 button,
 h1 {
+  transition-timing-function: cubic-bezier(0.1, 0.5, 0.72, 0.96);
   margin-top: 10px;
   transition-duration: 0.5s;
   border-radius: 20px;
