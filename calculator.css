@@ -4,7 +4,7 @@
   transition-duration: 100ms;
 }
 #sign_element:not(#sign_element[data-sign-element-was-hovered="true"]) {
-  animation: animation_opacity_change 2s, animation_stand_up_3d 2s linear 1;
+  animation: animation_opacity_change 2s, animation_stand_up_3d 2s ease-out 1;
    transform-origin: bottom;
    transform-style: preserve-3d;
   border: white 10px solid;
@@ -27,9 +27,9 @@
 }
 button,
 h1 {
-  animation: animation_opacity_change 1s, animation_stand_up_3d 1s linear 1;
-          transform-origin: bottom;
-        transform-style: preserve-3d;
+  animation: animation_opacity_change 1s, animation_stand_up_3d 1s ease-out 1;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
 }
 @keyframes animation_opacity_change {
   0% {
@@ -282,13 +282,13 @@ input[type="range"] {
     transform: rotate3d(-1, 0, 0, 90deg);
   }
   25% {
-    transform: rotate3d(-1, 0, 0, 67.5deg);
+    transform: rotate3d(-1, 0, 0, 70deg);
   }
   50% {
-    transform: rotate3d(-1, 0, 0, 45deg);
+    transform: rotate3d(-1, 0, 0, 50deg);
   }
   50% {
-    transform: rotate3d(-1, 0, 0, 22.5deg);
+    transform: rotate3d(-1, 0, 0, 20deg);
   }
   100% {
     transform: rotate3d(-1, 0, 0, 0deg);
