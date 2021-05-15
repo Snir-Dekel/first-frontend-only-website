@@ -27,6 +27,7 @@
 }
 button,
 h1 {
+  transition-duration: 1s;
   border-radius: 20px;
   animation: animation_opacity_change 1s, animation_stand_up_3d 1s ease-out 1;
   transform-origin: bottom;
