@@ -15,7 +15,6 @@
   left: 900px;
 }
 #sign_element {
-  /*animation: animation_opacity_change 2s, animation_stand_up_3d 2s linear 1;*/
    transform-origin: bottom;
    transform-style: preserve-3d;
   border: white 10px solid;
@@ -27,6 +26,7 @@
 }
 button,
 h1 {
+  transition-timing-function: cubic-bezier(0.1, 0.5, 0.72, 0.96);
   margin-top: 10px;
   transition-duration: 0.5s;
   border-radius: 20px;
