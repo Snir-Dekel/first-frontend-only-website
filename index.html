@@ -108,7 +108,7 @@
         </clipPath>
       </defs>
     </svg>
-    <script type="text/javascript">
+    <script>
       let my_path = document.getElementById("path");
       let sign_element = document.getElementById("sign_element")
         sign_element.addEventListener(
@@ -134,7 +134,7 @@
         },
         false
       );
-      VanillaTilt.init(document.querySelector("#my_range"), {
+      VanillaTilt.init(document.querySelectorAll("button, input:not(input[type=number])"), {
 		max: 25,
 		speed: 800
 	});
