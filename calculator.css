@@ -8,7 +8,7 @@ input{
   border-radius: 20px;
 }
 #sign_element:not(#sign_element[data-sign-element-was-hovered="true"]) {
-  animation: animation_opacity_change 2s, animation_stand_up_3d 2s ease-out 1;
+  /*animation: animation_opacity_change 2s, animation_stand_up_3d 2s ease-out 1;*/
    transform-origin: bottom;
    transform-style: preserve-3d;
   border: white 10px solid;
