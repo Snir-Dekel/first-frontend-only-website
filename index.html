@@ -10,6 +10,8 @@
     <title>my calculator</title>
     <link rel="stylesheet" href="calculator.css" />
     <link rel="icon" type="image/png" href="logo.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
     <!-- Hotjar Tracking Code for https://snir-dekel.github.io/website/ -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -143,6 +145,7 @@
       max: 25,
       speed: 800
 	});
+      $("svg").tilt()
     </script>
     <script src="calculator.js"></script>
   </body>
